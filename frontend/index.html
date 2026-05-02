@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Processing Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <header class="hero">
+        <div>
+            <p class="badge">AI Document Automation</p>
+            <h1>Invoice Processing Agent</h1>
+            <p class="subtitle">
+                Upload an invoice PDF and extract structured billing data automatically.
+            </p>
+        </div>
+    </header>
+
+    <main class="grid">
+        <section class="card upload-card">
+            <h2>Upload Invoice</h2>
+            <p class="muted">Supported format: PDF</p>
+
+            <label class="dropzone" for="fileInput">
+                <span class="icon">📄</span>
+                <span id="fileName">Click to choose an invoice PDF</span>
+            </label>
+
+            <input type="file" id="fileInput" accept="application/pdf">
+
+            <button id="uploadBtn" onclick="upload()">Process Invoice</button>
+
+            <p id="statusText" class="status"></p>
+        </section>
+
+        <section class="card result-card">
+            <h2>Extracted Fields</h2>
+
+            <div id="emptyState" class="empty">
+                No invoice processed yet.
+            </div>
+
+            <div id="resultView" class="result hidden">
+                <div class="field">
+                    <span>Vendor</span>
+                    <strong id="vendorName">-</strong>
+                </div>
+
+                <div class="field">
+                    <span>Invoice Number</span>
+                    <strong id="invoiceNumber">-</strong>
+                </div>
+
+                <div class="field">
+                    <span>Invoice Date</span>
+                    <strong id="invoiceDate">-</strong>
+                </div>
+
+                <div class="field">
+                    <span>Due Date</span>
+                    <strong id="dueDate">-</strong>
+                </div>
+
+                <div class="amount-box">
+                    <span>Total Amount</span>
+                    <strong id="totalAmount">-</strong>
+                </div>
+
+                <div id="issuesBox" class="issues hidden"></div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
