@@ -1,6 +1,3 @@
-Use this cleaner, stronger `README.md`. Less “student project,” more “I understand production AI systems.” Humanity may recover.
-
-````md
 # Invoice Processing Agent
 
 A full-stack invoice extraction system that converts PDF invoices into structured JSON using a hybrid extraction pipeline.
